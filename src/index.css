@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    background-image: 
+      radial-gradient(circle at 25px 25px, rgba(255,255,255,0.8) 2%, transparent 0%),
+      radial-gradient(circle at 75px 75px, rgba(255,255,255,0.6) 2%, transparent 0%),
+      linear-gradient(45deg, transparent 49%, rgba(59, 130, 246, 0.03) 49%, rgba(59, 130, 246, 0.03) 51%, transparent 51%),
+      linear-gradient(-45deg, transparent 49%, rgba(59, 130, 246, 0.03) 49%, rgba(59, 130, 246, 0.03) 51%, transparent 51%);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: 0 0, 50px 50px, 0 0, 0 0;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+  
+  .content-section {
+    @apply bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-white/20;
+  }
+}
