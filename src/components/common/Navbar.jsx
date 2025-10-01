@@ -8,30 +8,22 @@ const Navbar = () => {
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
-          {/* Logo */}
+          {/* Logo - Only Logo Image */}
           <div className="flex items-center">
             <div className="flex items-center space-x-3">
               <img 
-                src="/public/images/kynode-logo.jpg" 
+                src="/images/kynode-logo.jpg" 
                 alt="Kynode Background Verification" 
-                className="h-10 w-10 object-contain"
-                onError={(e) => {
-                  e.target.style.display = 'none'
-                  e.target.nextSibling.style.display = 'flex'
-                }}
+                className="h-12 w-12 object-contain"
               />
-              {/* <div className="h-10 w-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg hidden">
-                K
-              </div> */}
-              
-              <div>
+               <div>
                 <span className="text-2xl font-bold text-gray-900">Kynode</span>
                 <span className="block text-xs text-gray-500 -mt-1">Background Verification</span>
               </div>
             </div>
           </div>
 
-          
+          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-2">
             <a 
               href="#home" 
@@ -67,7 +59,7 @@ const Navbar = () => {
             
             <div className="flex items-center space-x-4 ml-4">
               <a 
-                href="tel:+911234567890" 
+                href="tel:+919686881464" 
                 className="flex items-center text-gray-700 hover:text-black transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-gray-100"
               >
                 <Phone className="h-4 w-4 mr-2" />
@@ -75,14 +67,14 @@ const Navbar = () => {
               </a>
               <a 
                 href="#contact" 
-                className="bg-black hover:bg-black text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200"
+                className="bg-black hover:bg-gray-800 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200"
               >
                 Get Started
               </a>
             </div>
           </div>
 
-          
+          {/* Mobile menu button */}
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -93,7 +85,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        
+        {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
@@ -128,7 +120,7 @@ const Navbar = () => {
               
               <div className="pt-4 border-t">
                 <a 
-                  href="tel:+91 96868 81464" 
+                  href="tel:+919686881464" 
                   className="flex items-center px-3 py-3 text-base font-medium text-gray-700 hover:text-black hover:bg-gray-100 rounded-md transition-all duration-200"
                   onClick={() => setIsOpen(false)}
                 >
@@ -137,7 +129,7 @@ const Navbar = () => {
                 </a>
                 <a 
                   href="#contact" 
-                  className="block w-full mt-2 bg-black hover:bg-black text-white font-semibold py-3 px-6 rounded-lg text-center transition-colors duration-200"
+                  className="block w-full mt-2 bg-black hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg text-center transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   Get Started
